@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/broodjes/static/css/main.c5f9aa68.chunk.css",
+    "main.js": "/broodjes/static/js/main.3fe93393.chunk.js",
+    "main.js.map": "/broodjes/static/js/main.3fe93393.chunk.js.map",
+    "runtime-main.js": "/broodjes/static/js/runtime-main.4562872d.js",
+    "runtime-main.js.map": "/broodjes/static/js/runtime-main.4562872d.js.map",
+    "static/js/2.1cbe96f9.chunk.js": "/broodjes/static/js/2.1cbe96f9.chunk.js",
+    "static/js/2.1cbe96f9.chunk.js.map": "/broodjes/static/js/2.1cbe96f9.chunk.js.map",
+    "index.html": "/broodjes/index.html",
+    "static/css/main.c5f9aa68.chunk.css.map": "/broodjes/static/css/main.c5f9aa68.chunk.css.map",
+    "static/js/2.1cbe96f9.chunk.js.LICENSE.txt": "/broodjes/static/js/2.1cbe96f9.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/broodjes/static/media/Quicksand-Light.d9866972.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4562872d.js",
+    "static/js/2.1cbe96f9.chunk.js",
+    "static/css/main.c5f9aa68.chunk.css",
+    "static/js/main.3fe93393.chunk.js"
+  ]
+}
