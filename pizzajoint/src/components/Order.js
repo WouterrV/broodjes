@@ -31,7 +31,7 @@ const childVariants = {
   }
 }
 
-const Order = ({ pizza, setShowModal }) => {
+const Order = ({ meal, setShowModal }) => {
   // useEffect lifecycle hook, array with only setShowModal as dep 
   useEffect(() => {
     setTimeout(() => setShowModal(true), 5000);
@@ -44,11 +44,11 @@ const Order = ({ pizza, setShowModal }) => {
       animate="visible"
       exit="exit"
     >
-      <h2>Thank you for your order :)</h2>
-      <motion.p variants={childVariants}>You ordered a {pizza.base} pizza with:</motion.p>
-      <motion.div variants={childVariants}>
-        {pizza.toppings.map(topping => <div key={topping} >{topping}</div>)}
-      </motion.div>    
+        <h2>Bedankt voor je bestelling!</h2>
+        <motion.p variants={childVariants} >Je hebt een {meal.base} besteld {meal.toppings.length > 0? "met:" : "zonder toppings."}</motion.p>
+        <motion.div variants={childVariants}>
+          {meal.toppings.map(topping => <div key={topping} >{topping}</div>)}
+        </motion.div>    
     </motion.div>
   )
 }

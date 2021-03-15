@@ -30,8 +30,8 @@ const buttonVariants = {
   }
 }
 
-const Toppings = ({ addTopping, pizza }) => {
-  let toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
+const Toppings = ({ addTopping, meal }) => {
+  let toppings = ['mayo', 'ketchup', 'kaas', 'uitjes'];
 
   return (
     <motion.div className="toppings container"
@@ -40,10 +40,10 @@ const Toppings = ({ addTopping, pizza }) => {
       animate="visible"
       exit="exit"
     >
-      <h3>Step 2: Choose Toppings</h3>
+      <h3>Stap 2: Kies de toppings</h3>
       <ul>
         {toppings.map(topping => {
-          let spanClass = pizza.toppings.includes(topping) ? 'active' : '';
+          let spanClass = meal.toppings.includes(topping) ? 'active' : '';
           return (
             <motion.li key={topping} onClick={() => addTopping(topping)}
               whileHover={{ scale: 1.3, originX: 0, color: '#f8e112' }}
@@ -59,7 +59,7 @@ const Toppings = ({ addTopping, pizza }) => {
           variants={buttonVariants}
           whileHover="hover"
         >
-          Order
+          Bestel
         </motion.button>
       </Link>
 

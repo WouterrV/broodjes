@@ -10,37 +10,39 @@ import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const location = useLocation();
-  const [pizza, setPizza] = useState({ base: "", toppings: [] });
+  const [meal, setMeal] = useState({ base: "", toppings: [] });
   const [showModal, setShowModal] = useState(false);
 
   const addBase = (base) => {
-    setPizza({ ...pizza, base })
+    setMeal({ ...meal, base })
   }
   
   const addTopping = (topping) => {
     let newToppings;
-    if(!pizza.toppings.includes(topping)){
-      newToppings = [...pizza.toppings, topping];
+    if(!meal.toppings.includes(topping)){
+      newToppings = [...meal.toppings, topping];
     } else {
-      newToppings = pizza.toppings.filter(item => item !== topping);
+      newToppings = meal.toppings.filter(item => item !== topping);
     }
-    setPizza({ ...pizza, toppings: newToppings });
+    setMeal({ ...meal, toppings: newToppings });
   }
 
   return (
     <>
       <Header />
+
       <Modal showModal={showModal} />
+
       <AnimatePresence exitBeforeEnter onExitComplete={() => setShowModal(false)}>
         <Switch location={location} key={location.key}>
           <Route path="/base">
-            <Base addBase={addBase} pizza={pizza} />
+            <Base addBase={addBase} meal={meal} />
           </Route>
           <Route path="/toppings">
-            <Toppings addTopping={addTopping} pizza={pizza} />
+            <Toppings addTopping={addTopping} meal={meal} />
           </Route>
           <Route path="/order">
-            <Order pizza={pizza} setShowModal={setShowModal} />
+            <Order meal={meal} setShowModal={setShowModal} />
           </Route>
           <Route path="/">
             <Home />

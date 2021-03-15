@@ -40,8 +40,8 @@ const buttonVariants = {
   }
 }
 
-const Base = ({ addBase, pizza }) => {
-  const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
+const Base = ({ addBase, meal }) => {
+  const bases = ['Frikandelbroodje met vlees', 'Vega frikandelbroodje'];
 
   return (
     <motion.div className="base container"
@@ -50,10 +50,10 @@ const Base = ({ addBase, pizza }) => {
       animate="visible"
       exit="exit"
     >
-      <h3>Step 1: Choose Your Base</h3>
+      <h3>Stap 1: Kies de basis</h3>
       <ul>
         {bases.map(base => {
-          let spanClass = pizza.base === base ? 'active' : '';
+          let spanClass = meal.base === base ? 'active' : '';
           return (
             <motion.li key={base} onClick={() => addBase(base)}
               whileHover={{ scale: 1.3, originX: 0, color: '#f8e112' }}
@@ -65,7 +65,7 @@ const Base = ({ addBase, pizza }) => {
         })}
       </ul>
 
-      {pizza.base && (
+      {meal.base && (
         <motion.div className="next"
           variants={nextVariants}
         >
@@ -74,7 +74,7 @@ const Base = ({ addBase, pizza }) => {
               variants={buttonVariants}
                whileHover="hover"
             >
-              Next
+              Volgende
             </motion.button>
           </Link>
         </motion.div>

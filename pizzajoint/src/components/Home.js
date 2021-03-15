@@ -36,13 +36,13 @@ const Home = () => {
       animate="visible"
       exit="exit"
     >
-      <h2>Welcome to Pizza Joint</h2>
+      <h2>Welkom bij Broodjeszaak Bommel!</h2>
       <Link to="/base">
         <motion.button
           variants={buttonVariants}
           whileHover="hover"
         >
-          Create Your Pizza
+          Creeër je eigen broodje
         </motion.button>
       </Link>
     </motion.div>
